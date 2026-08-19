@@ -17,36 +17,25 @@ namespace pryCapelloRegistro
             InitializeComponent();
         }
 
-        //Declaracion de una estructura para el registro de clientes
-        private struct RegCliente
-        {
-            public int codigo;
-            public decimal deuda;
-            public string usuario;
-            public decimal limite;
-        };
-
-        private RegCliente[] clientes = new RegCliente[5];
-
-        private int indice = 0;
+        clsVector objVector = new clsVector();
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            if (indice < clientes.Length)
+            if (clsVector.indice < clsVector.clientes.Length)
             {
                 //Busqueda Secuencial
                 Int32 i = 0;
-                while (clientes[i].codigo != Convert.ToInt32(txtCodigo.Text) && i < indice)
+                while (clsVector.clientes[i].codigo != Convert.ToInt32(txtCodigo.Text) && i < clsVector.indice)
                 {
                     i++;
                 }
-                if (indice == i)
+                if (clsVector.indice == i)
                 {
-                    clientes[indice].codigo = Convert.ToInt32(txtCodigo.Text);
-                    clientes[indice].deuda = Convert.ToDecimal(txtDeuda.Text);
-                    clientes[indice].usuario = txtUsuario.Text;
-                    clientes[indice].limite = Convert.ToDecimal(txtLimite.Text);
-
+                    clsVector.clientes[clsVector.indice].codigo = Convert.ToInt32(txtCodigo.Text);
+                    clsVector.clientes[clsVector.indice].deuda = Convert.ToDecimal(txtDeuda.Text);
+                    clsVector.clientes[clsVector.indice].usuario = txtUsuario.Text;
+                    clsVector.clientes[clsVector.indice].limite = Convert.ToDecimal(txtLimite.Text);
+                        
                     txtCodigo.Clear();
                     txtDeuda.Clear();
                     txtUsuario.Clear();
@@ -91,14 +80,14 @@ namespace pryCapelloRegistro
         {
             decimal totalDeuda = 0;
             dgvDatos.Rows.Clear();
-            for (int i = 0; i < indice; i++)
+            for (int i = 0; i < clsVector.indice; i++)
             {
                 dgvDatos.Rows.Add(
-                    clientes[i].codigo,
-                    clientes[i].usuario,
-                    clientes[i].limite,
-                    clientes[i].deuda);
-                totalDeuda += clientes[i].deuda;
+                    clsVector.clientes[i].codigo,
+                    clsVector.clientes[i].usuario,
+                    clsVector.clientes[i].limite,
+                    clsVector.clientes[i].deuda);
+                totalDeuda += clsVector.clientes[i].deuda;
             }
             lblMuestraDeuda.Text = totalDeuda.ToString();       
         }
@@ -107,16 +96,16 @@ namespace pryCapelloRegistro
         {
             Decimal  totalDeudores = 0;
             dgvDatos.Rows.Clear();
-            for (int i = 0; i < indice; i++)
+            for (int i = 0; i < clsVector.indice; i++)
             {
-                if (clientes[i].deuda > 0)
+                if (clsVector.clientes[i].deuda > 0)
                 {
                     dgvDatos.Rows.Add(
-                    clientes[i].codigo,
-                    clientes[i].usuario,
-                    clientes[i].limite,
-                    clientes[i].deuda);
-                    totalDeudores += clientes[i].deuda;
+                    clsVector.clientes[i].codigo,
+                    clsVector.clientes[i].usuario,
+                    clsVector.clientes[i].limite,
+                    clsVector.clientes[i].deuda);
+                    totalDeudores += clsVector.clientes[i].deuda;
                 }
             }
 
@@ -141,33 +130,33 @@ namespace pryCapelloRegistro
 
         private void Precarga()
         {
-            clientes[indice].codigo = 1;
-            clientes[indice].deuda = 5;
-            clientes[indice].usuario = "Nico";
-            clientes[indice].limite = 1000;
+            clsVector.clientes[clsVector.indice].codigo = 1;
+            clsVector.clientes[clsVector.indice].deuda = 5;
+            clsVector.clientes[clsVector.indice].usuario = "Nico";
+            clsVector.clientes[clsVector.indice].limite = 1000;
 
-            indice++;
+            clsVector.indice++;
 
-            clientes[indice].codigo = 2;
-            clientes[indice].deuda = 10;
-            clientes[indice].usuario = "Pedro";
-            clientes[indice].limite = 1000;
+            clsVector.clientes[clsVector.indice].codigo = 2;
+            clsVector.clientes[clsVector.indice].deuda = 10;
+            clsVector.clientes[clsVector.indice].usuario = "Pedro";
+            clsVector.clientes[clsVector.indice].limite = 1000;
 
-            indice++;
+            clsVector.indice++;
 
-            clientes[indice].codigo = 3;
-            clientes[indice].deuda = 15;
-            clientes[indice].usuario = "Ana";
-            clientes[indice].limite = 1000;
+            clsVector.clientes[clsVector.indice].codigo = 3;
+            clsVector.clientes[clsVector.indice].deuda = 15;
+            clsVector.clientes[clsVector.indice].usuario = "Ana";
+            clsVector.clientes[clsVector.indice].limite = 1000;
 
-            indice++;
+            clsVector.indice++;
 
-            clientes[indice].codigo = 4;
-            clientes[indice].deuda = 0;
-            clientes[indice].usuario = "Juan Pedro";
-            clientes[indice].limite = 1000;
+            clsVector.clientes[clsVector.indice].codigo = 4;
+            clsVector.clientes[clsVector.indice].deuda = 0;
+            clsVector.clientes[clsVector.indice].usuario = "Juan Pedro";
+            clsVector.clientes[clsVector.indice].limite = 1000;
 
-            indice++;
+            clsVector.indice++;
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
