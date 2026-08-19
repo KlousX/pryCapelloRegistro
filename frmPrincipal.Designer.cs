@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.gbConsulta = new System.Windows.Forms.GroupBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblDeuda = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblCredito = new System.Windows.Forms.Label();
-            this.lblTotalDeuda = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtDeuda = new System.Windows.Forms.TextBox();
-            this.txtLimite = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblMuestraDeuda = new System.Windows.Forms.Label();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtLimite = new System.Windows.Forms.TextBox();
+            this.txtDeuda = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCredito = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblDeuda = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.gbConsulta = new System.Windows.Forms.GroupBox();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLímite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnListarDeudores = new System.Windows.Forms.Button();
+            this.lblMuestraDeuda = new System.Windows.Forms.Label();
+            this.lblTotalDeuda = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             this.gbConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -71,49 +71,49 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Carga de Datos";
             // 
-            // gbConsulta
+            // btnCargar
             // 
-            this.gbConsulta.BackColor = System.Drawing.Color.White;
-            this.gbConsulta.Controls.Add(this.dgvDatos);
-            this.gbConsulta.Controls.Add(this.btnListar);
-            this.gbConsulta.Controls.Add(this.lblMuestraDeuda);
-            this.gbConsulta.Controls.Add(this.lblTotalDeuda);
-            this.gbConsulta.Location = new System.Drawing.Point(12, 188);
-            this.gbConsulta.Name = "gbConsulta";
-            this.gbConsulta.Size = new System.Drawing.Size(489, 278);
-            this.gbConsulta.TabIndex = 1;
-            this.gbConsulta.TabStop = false;
-            this.gbConsulta.Text = "Consultas";
+            this.btnCargar.Location = new System.Drawing.Point(339, 132);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(128, 23);
+            this.btnCargar.TabIndex = 4;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.btnCargar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnCargar_KeyDown);
             // 
-            // lblCodigo
+            // txtUsuario
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(21, 40);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(46, 15);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Código";
+            this.txtUsuario.Location = new System.Drawing.Point(339, 40);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(128, 20);
+            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
-            // lblDeuda
+            // txtLimite
             // 
-            this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeuda.Location = new System.Drawing.Point(23, 96);
-            this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(44, 15);
-            this.lblDeuda.TabIndex = 1;
-            this.lblDeuda.Text = "Deuda";
+            this.txtLimite.Location = new System.Drawing.Point(339, 96);
+            this.txtLimite.Name = "txtLimite";
+            this.txtLimite.Size = new System.Drawing.Size(128, 20);
+            this.txtLimite.TabIndex = 3;
+            this.txtLimite.TextChanged += new System.EventHandler(this.txtLimite_TextChanged);
+            this.txtLimite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLimite_KeyDown);
             // 
-            // lblUser
+            // txtDeuda
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(253, 41);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(50, 15);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Usuario";
+            this.txtDeuda.Location = new System.Drawing.Point(85, 96);
+            this.txtDeuda.Name = "txtDeuda";
+            this.txtDeuda.Size = new System.Drawing.Size(128, 20);
+            this.txtDeuda.TabIndex = 1;
+            this.txtDeuda.TextChanged += new System.EventHandler(this.txtDeuda_TextChanged);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(85, 40);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(128, 20);
+            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblCredito
             // 
@@ -125,63 +125,49 @@
             this.lblCredito.TabIndex = 3;
             this.lblCredito.Text = "Límite de Crédito";
             // 
-            // lblTotalDeuda
+            // lblUser
             // 
-            this.lblTotalDeuda.AutoSize = true;
-            this.lblTotalDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDeuda.Location = new System.Drawing.Point(253, 215);
-            this.lblTotalDeuda.Name = "lblTotalDeuda";
-            this.lblTotalDeuda.Size = new System.Drawing.Size(74, 15);
-            this.lblTotalDeuda.TabIndex = 4;
-            this.lblTotalDeuda.Text = "Total Deuda";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(253, 41);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(50, 15);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Usuario";
             // 
-            // txtCodigo
+            // lblDeuda
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(85, 40);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(128, 20);
-            this.txtCodigo.TabIndex = 0;
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeuda.Location = new System.Drawing.Point(23, 96);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(44, 15);
+            this.lblDeuda.TabIndex = 1;
+            this.lblDeuda.Text = "Deuda";
             // 
-            // txtDeuda
+            // lblCodigo
             // 
-            this.txtDeuda.Location = new System.Drawing.Point(85, 96);
-            this.txtDeuda.Name = "txtDeuda";
-            this.txtDeuda.Size = new System.Drawing.Size(128, 20);
-            this.txtDeuda.TabIndex = 1;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(21, 40);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(46, 15);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Código";
             // 
-            // txtLimite
+            // gbConsulta
             // 
-            this.txtLimite.Location = new System.Drawing.Point(339, 96);
-            this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(128, 20);
-            this.txtLimite.TabIndex = 3;
-            this.txtLimite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLimite_KeyDown);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(339, 40);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(128, 20);
-            this.txtUsuario.TabIndex = 2;
-            // 
-            // lblMuestraDeuda
-            // 
-            this.lblMuestraDeuda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMuestraDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMuestraDeuda.Location = new System.Drawing.Point(339, 214);
-            this.lblMuestraDeuda.Name = "lblMuestraDeuda";
-            this.lblMuestraDeuda.Size = new System.Drawing.Size(128, 15);
-            this.lblMuestraDeuda.TabIndex = 5;
-            // 
-            // btnListar
-            // 
-            this.btnListar.Location = new System.Drawing.Point(339, 239);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(128, 23);
-            this.btnListar.TabIndex = 0;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.gbConsulta.BackColor = System.Drawing.Color.White;
+            this.gbConsulta.Controls.Add(this.dgvDatos);
+            this.gbConsulta.Controls.Add(this.btnListarDeudores);
+            this.gbConsulta.Controls.Add(this.lblMuestraDeuda);
+            this.gbConsulta.Controls.Add(this.lblTotalDeuda);
+            this.gbConsulta.Location = new System.Drawing.Point(12, 188);
+            this.gbConsulta.Name = "gbConsulta";
+            this.gbConsulta.Size = new System.Drawing.Size(489, 278);
+            this.gbConsulta.TabIndex = 1;
+            this.gbConsulta.TabStop = false;
+            this.gbConsulta.Text = "Consultas";
             // 
             // dgvDatos
             // 
@@ -198,17 +184,6 @@
             this.dgvDatos.RowHeadersWidth = 39;
             this.dgvDatos.Size = new System.Drawing.Size(441, 183);
             this.dgvDatos.TabIndex = 7;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(339, 132);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(128, 23);
-            this.btnCargar.TabIndex = 4;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            this.btnCargar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnCargar_KeyDown);
             // 
             // colCodigo
             // 
@@ -230,6 +205,35 @@
             this.colDeuda.HeaderText = "Deuda";
             this.colDeuda.Name = "colDeuda";
             // 
+            // btnListarDeudores
+            // 
+            this.btnListarDeudores.Location = new System.Drawing.Point(339, 239);
+            this.btnListarDeudores.Name = "btnListarDeudores";
+            this.btnListarDeudores.Size = new System.Drawing.Size(128, 23);
+            this.btnListarDeudores.TabIndex = 0;
+            this.btnListarDeudores.Text = "Listar Deudores";
+            this.btnListarDeudores.UseVisualStyleBackColor = true;
+            this.btnListarDeudores.Click += new System.EventHandler(this.btnListarDeudores_Click);
+            // 
+            // lblMuestraDeuda
+            // 
+            this.lblMuestraDeuda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMuestraDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMuestraDeuda.Location = new System.Drawing.Point(339, 214);
+            this.lblMuestraDeuda.Name = "lblMuestraDeuda";
+            this.lblMuestraDeuda.Size = new System.Drawing.Size(128, 15);
+            this.lblMuestraDeuda.TabIndex = 5;
+            // 
+            // lblTotalDeuda
+            // 
+            this.lblTotalDeuda.AutoSize = true;
+            this.lblTotalDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeuda.Location = new System.Drawing.Point(253, 215);
+            this.lblTotalDeuda.Name = "lblTotalDeuda";
+            this.lblTotalDeuda.Size = new System.Drawing.Size(74, 15);
+            this.lblTotalDeuda.TabIndex = 4;
+            this.lblTotalDeuda.Text = "Total Deuda";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +244,7 @@
             this.Controls.Add(this.gbDatos);
             this.Name = "frmPrincipal";
             this.Text = "Registro Cliente";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.gbConsulta.ResumeLayout(false);
@@ -264,7 +269,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnListarDeudores;
         private System.Windows.Forms.Label lblMuestraDeuda;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
