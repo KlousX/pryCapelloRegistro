@@ -47,16 +47,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsVector.cs" />
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="frmAgregarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="frmAgregarClientes.Designer.cs">
+      <DependentUpon>frmAgregarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestion.Designer.cs">
+      <DependentUpon>frmGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListado.Designer.cs">
+      <DependentUpon>frmListado.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarClientes.resx">
+      <DependentUpon>frmAgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestion.resx">
+      <DependentUpon>frmGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListado.resx">
+      <DependentUpon>frmListado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
