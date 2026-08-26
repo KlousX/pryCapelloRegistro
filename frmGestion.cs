@@ -20,7 +20,14 @@ namespace pryCapelloRegistro
         private void agregarNuevosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form agregarClientes = new frmAgregarClientes();
-            agregarClientes.MdiParent = this;
+            //agregarClientes.MdiParent = this;
+            agregarClientes.Show();
+        }
+
+        private void clientesOrdPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form agregarClientes = new frmListado();
+            //agregarClientes.MdiParent = this;
             agregarClientes.Show();
         }
     }

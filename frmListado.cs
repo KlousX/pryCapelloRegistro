@@ -24,7 +24,7 @@ namespace pryCapelloRegistro
             switch (cboCampo.SelectedIndex)
             {
                 case 0:
-                    if (cboCampo.SelectedIndex == 0)
+                    if (cboModo.SelectedIndex == 0)
                     {
                         objVector.OrdenarCodigoAscendente();
                     }
@@ -32,10 +32,10 @@ namespace pryCapelloRegistro
                     {
                         objVector.OrdenarCodigoDescendente();
                     }
-                break;  
+                    break;
 
                 case 1:
-                    if (cboCampo.SelectedIndex == 1)
+                    if (cboModo.SelectedIndex == 0)
                     {
                         objVector.OrdenarNombreAscendente();
                     }
@@ -43,10 +43,10 @@ namespace pryCapelloRegistro
                     {
                         objVector.OrdenarNombreDescendente();
                     }
-                break;
+                    break;
 
                 case 2:
-                    if (cboCampo.SelectedIndex == 2)
+                    if (cboModo.SelectedIndex == 0)
                     {
                         objVector.OrdenarDeudaAscendente();
                     }
@@ -57,7 +57,7 @@ namespace pryCapelloRegistro
                     break;
 
                 case 3:
-                    if (cboCampo.SelectedIndex == 3)
+                    if (cboModo.SelectedIndex == 0)
                     {
                         objVector.OrdenarLimiteAscendente();
                     }
@@ -66,9 +66,27 @@ namespace pryCapelloRegistro
                         objVector.OrdenarLimiteDescendente();
                     }
                     break;
-                    }
-                    
+        
             }
+
+            dgvListado.Rows.Clear();
+
+            for(int i = 0; i < clsVector.indice; i++)
+            {
+                dgvListado.Rows.Add(
+                    clsVector.clientes[i].codigo,
+                    clsVector.clientes[i].usuario,
+                    clsVector.clientes[i].limite,
+                    clsVector.clientes[i].deuda
+                    );
+            }
+
+        }
+
+        private void frmListado_Load(object sender, EventArgs e)
+        {
+            clsVector.Precarga();
+
         }
     }
 }

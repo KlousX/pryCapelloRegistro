@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvListado = new System.Windows.Forms.DataGridView();
-            this.lblCampo = new System.Windows.Forms.Label();
-            this.lblModo = new System.Windows.Forms.Label();
-            this.cboCampo = new System.Windows.Forms.ComboBox();
             this.cboModo = new System.Windows.Forms.ComboBox();
+            this.cboCampo = new System.Windows.Forms.ComboBox();
+            this.lblModo = new System.Windows.Forms.Label();
+            this.lblCampo = new System.Windows.Forms.Label();
+            this.dgvListado = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,39 +56,16 @@
             this.panel1.Size = new System.Drawing.Size(616, 347);
             this.panel1.TabIndex = 0;
             // 
-            // dgvListado
+            // cboModo
             // 
-            this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCodigo,
-            this.colNombre,
-            this.colLimite,
-            this.colDeuda});
-            this.dgvListado.Location = new System.Drawing.Point(12, 67);
-            this.dgvListado.Name = "dgvListado";
-            this.dgvListado.Size = new System.Drawing.Size(588, 267);
-            this.dgvListado.TabIndex = 0;
-            // 
-            // lblCampo
-            // 
-            this.lblCampo.AutoSize = true;
-            this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo.Location = new System.Drawing.Point(45, 32);
-            this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(47, 15);
-            this.lblCampo.TabIndex = 3;
-            this.lblCampo.Text = "Campo";
-            // 
-            // lblModo
-            // 
-            this.lblModo.AutoSize = true;
-            this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModo.Location = new System.Drawing.Point(349, 32);
-            this.lblModo.Name = "lblModo";
-            this.lblModo.Size = new System.Drawing.Size(39, 15);
-            this.lblModo.TabIndex = 4;
-            this.lblModo.Text = "Modo";
+            this.cboModo.FormattingEnabled = true;
+            this.cboModo.Items.AddRange(new object[] {
+            "Ascendente",
+            "Descendente"});
+            this.cboModo.Location = new System.Drawing.Point(404, 31);
+            this.cboModo.Name = "cboModo";
+            this.cboModo.Size = new System.Drawing.Size(179, 21);
+            this.cboModo.TabIndex = 6;
             // 
             // cboCampo
             // 
@@ -103,16 +80,39 @@
             this.cboCampo.Size = new System.Drawing.Size(179, 21);
             this.cboCampo.TabIndex = 5;
             // 
-            // cboModo
+            // lblModo
             // 
-            this.cboModo.FormattingEnabled = true;
-            this.cboModo.Items.AddRange(new object[] {
-            "Ascendente",
-            "Descendente"});
-            this.cboModo.Location = new System.Drawing.Point(404, 31);
-            this.cboModo.Name = "cboModo";
-            this.cboModo.Size = new System.Drawing.Size(179, 21);
-            this.cboModo.TabIndex = 6;
+            this.lblModo.AutoSize = true;
+            this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModo.Location = new System.Drawing.Point(349, 32);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(39, 15);
+            this.lblModo.TabIndex = 4;
+            this.lblModo.Text = "Modo";
+            // 
+            // lblCampo
+            // 
+            this.lblCampo.AutoSize = true;
+            this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo.Location = new System.Drawing.Point(45, 32);
+            this.lblCampo.Name = "lblCampo";
+            this.lblCampo.Size = new System.Drawing.Size(47, 15);
+            this.lblCampo.TabIndex = 3;
+            this.lblCampo.Text = "Campo";
+            // 
+            // dgvListado
+            // 
+            this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodigo,
+            this.colNombre,
+            this.colLimite,
+            this.colDeuda});
+            this.dgvListado.Location = new System.Drawing.Point(12, 67);
+            this.dgvListado.Name = "dgvListado";
+            this.dgvListado.Size = new System.Drawing.Size(588, 267);
+            this.dgvListado.TabIndex = 0;
             // 
             // colCodigo
             // 
@@ -148,11 +148,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 396);
+            this.ClientSize = new System.Drawing.Size(640, 397);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.panel1);
             this.Name = "frmListado";
             this.Text = "Listado Clientes";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
