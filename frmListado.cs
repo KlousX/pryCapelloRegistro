@@ -80,7 +80,6 @@ namespace pryCapelloRegistro
                     clsVector.clientes[i].deuda
                     );
             }
-
         }
 
         private void frmListado_Load(object sender, EventArgs e)
@@ -88,5 +87,7 @@ namespace pryCapelloRegistro
             clsVector.Precarga();
 
         }
+
+
     }
 }

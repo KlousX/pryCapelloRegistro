@@ -152,7 +152,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.panel1);
             this.Name = "frmListado";
-            this.Text = "Listado Clientes";
+            this.Text = "Listado Clientes ordenado";
             this.Load += new System.EventHandler(this.frmListado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

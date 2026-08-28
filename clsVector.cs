@@ -21,10 +21,13 @@ namespace pryCapelloRegistro
 
         public static RegCliente[] clientes = new RegCliente[5];
 
+
         public static int indice = 0;
 
         public static void Precarga()
         {
+            indice = 0;
+
             clientes[indice].codigo = 1;
             clientes[indice].usuario = "Nico";
             clientes[indice].limite = 100;

@@ -26,9 +26,21 @@ namespace pryCapelloRegistro
 
         private void clientesOrdPorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form agregarClientes = new frmListado();
+            Form ListadoOrdenado = new frmListado();
             //agregarClientes.MdiParent = this;
-            agregarClientes.Show();
+            ListadoOrdenado.Show();
+        }
+
+        private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Listado = new frmListadoClientes();
+            Listado.ShowDialog();
+        }
+
+        private void clientesDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form ListadoDeudores = new frmListadoDeudores();
+            ListadoDeudores.ShowDialog();
         }
     }
 }
