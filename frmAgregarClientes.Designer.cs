@@ -53,18 +53,21 @@
             this.gbDatos.Controls.Add(this.lblUser);
             this.gbDatos.Controls.Add(this.lblDeuda);
             this.gbDatos.Controls.Add(this.lblCodigo);
-            this.gbDatos.Location = new System.Drawing.Point(12, 12);
+            this.gbDatos.Location = new System.Drawing.Point(16, 15);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(489, 170);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Size = new System.Drawing.Size(652, 209);
             this.gbDatos.TabIndex = 1;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Carga de Datos";
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(339, 132);
+            this.btnCargar.Location = new System.Drawing.Point(452, 162);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(128, 23);
+            this.btnCargar.Size = new System.Drawing.Size(171, 28);
             this.btnCargar.TabIndex = 4;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -72,39 +75,44 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(339, 40);
+            this.txtUsuario.Location = new System.Drawing.Point(452, 49);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(128, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(169, 22);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtLimite
             // 
-            this.txtLimite.Location = new System.Drawing.Point(339, 96);
+            this.txtLimite.Location = new System.Drawing.Point(452, 118);
+            this.txtLimite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(128, 20);
+            this.txtLimite.Size = new System.Drawing.Size(169, 22);
             this.txtLimite.TabIndex = 3;
             // 
             // txtDeuda
             // 
-            this.txtDeuda.Location = new System.Drawing.Point(85, 96);
+            this.txtDeuda.Location = new System.Drawing.Point(113, 118);
+            this.txtDeuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDeuda.Name = "txtDeuda";
-            this.txtDeuda.Size = new System.Drawing.Size(128, 20);
+            this.txtDeuda.Size = new System.Drawing.Size(169, 22);
             this.txtDeuda.TabIndex = 1;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(85, 40);
+            this.txtCodigo.Location = new System.Drawing.Point(113, 49);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(128, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(169, 22);
             this.txtCodigo.TabIndex = 0;
             // 
             // lblCredito
             // 
             this.lblCredito.AutoSize = true;
             this.lblCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCredito.Location = new System.Drawing.Point(233, 96);
+            this.lblCredito.Location = new System.Drawing.Point(311, 118);
+            this.lblCredito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCredito.Name = "lblCredito";
-            this.lblCredito.Size = new System.Drawing.Size(100, 15);
+            this.lblCredito.Size = new System.Drawing.Size(119, 18);
             this.lblCredito.TabIndex = 3;
             this.lblCredito.Text = "Límite de Crédito";
             // 
@@ -112,9 +120,10 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(253, 41);
+            this.lblUser.Location = new System.Drawing.Point(337, 50);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(50, 15);
+            this.lblUser.Size = new System.Drawing.Size(60, 18);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Usuario";
             // 
@@ -122,9 +131,10 @@
             // 
             this.lblDeuda.AutoSize = true;
             this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeuda.Location = new System.Drawing.Point(23, 96);
+            this.lblDeuda.Location = new System.Drawing.Point(31, 118);
+            this.lblDeuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(44, 15);
+            this.lblDeuda.Size = new System.Drawing.Size(51, 18);
             this.lblDeuda.TabIndex = 1;
             this.lblDeuda.Text = "Deuda";
             // 
@@ -132,18 +142,20 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(21, 40);
+            this.lblCodigo.Location = new System.Drawing.Point(28, 49);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(46, 15);
+            this.lblCodigo.Size = new System.Drawing.Size(56, 18);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
             // frmAgregarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 194);
+            this.ClientSize = new System.Drawing.Size(684, 239);
             this.Controls.Add(this.gbDatos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAgregarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Clientes";

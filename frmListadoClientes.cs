@@ -22,8 +22,8 @@ namespace pryCapelloRegistro
         private void frmListadoClientes_Load(object sender, EventArgs e)
         {
             Decimal totalDeuda = 0;
-
-            clsVector.Precarga();
+            Int32 cantidadClientes = 0;
+            Decimal promDeuda = 0;
 
             dgvListado.Rows.Clear();
 
@@ -39,7 +39,12 @@ namespace pryCapelloRegistro
                 totalDeuda = totalDeuda + clsVector.clientes[i].deuda;
             }
 
+            promDeuda = totalDeuda / clsVector.indice;
+            cantidadClientes = clsVector.indice;
+
             lblMuestraDeuda.Text = totalDeuda.ToString();
+            lblQClientes.Text = cantidadClientes.ToString();
+            lblPromDeuda.Text = promDeuda.ToString();
         }
     }
 }

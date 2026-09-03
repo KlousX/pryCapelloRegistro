@@ -16,6 +16,7 @@ namespace pryCapelloRegistro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            clsVector.Precarga();
             Application.Run(new frmGestion());
         }
     }

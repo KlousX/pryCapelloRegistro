@@ -84,8 +84,7 @@ namespace pryCapelloRegistro
 
         private void frmListado_Load(object sender, EventArgs e)
         {
-            clsVector.Precarga();
-
+            
         }
 
 

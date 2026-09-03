@@ -47,20 +47,21 @@
             this.aCercaDeToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
             // aCercaDeToolStripMenuItem
             // 
             this.aCercaDeToolStripMenuItem.Name = "aCercaDeToolStripMenuItem";
-            this.aCercaDeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.aCercaDeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aCercaDeToolStripMenuItem.Text = "A cerca de";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -70,65 +71,67 @@
             this.clientesDeudoresToolStripMenuItem,
             this.clientesOrdPorToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // agregarNuevosClientesToolStripMenuItem
             // 
             this.agregarNuevosClientesToolStripMenuItem.Name = "agregarNuevosClientesToolStripMenuItem";
-            this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.agregarNuevosClientesToolStripMenuItem.Text = "Agregar nuevos clientes";
             this.agregarNuevosClientesToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClientesToolStripMenuItem_Click);
             // 
             // listadoDeClientesToolStripMenuItem
             // 
             this.listadoDeClientesToolStripMenuItem.Name = "listadoDeClientesToolStripMenuItem";
-            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.listadoDeClientesToolStripMenuItem.Text = "Listado de clientes";
             this.listadoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoDeClientesToolStripMenuItem_Click);
             // 
             // clientesDeudoresToolStripMenuItem
             // 
             this.clientesDeudoresToolStripMenuItem.Name = "clientesDeudoresToolStripMenuItem";
-            this.clientesDeudoresToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.clientesDeudoresToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.clientesDeudoresToolStripMenuItem.Text = "Clientes deudores";
             this.clientesDeudoresToolStripMenuItem.Click += new System.EventHandler(this.clientesDeudoresToolStripMenuItem_Click);
             // 
             // clientesOrdPorToolStripMenuItem
             // 
             this.clientesOrdPorToolStripMenuItem.Name = "clientesOrdPorToolStripMenuItem";
-            this.clientesOrdPorToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.clientesOrdPorToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.clientesOrdPorToolStripMenuItem.Text = "Clientes ord por...";
             this.clientesOrdPorToolStripMenuItem.Click += new System.EventHandler(this.clientesOrdPorToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
             this.clientesToolStripMenuItem,
             this.ventasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // frmGestion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGestion";

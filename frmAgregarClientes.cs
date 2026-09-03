@@ -17,11 +17,14 @@ namespace pryCapelloRegistro
             InitializeComponent();
         }
 
-        clsVector objVector = new clsVector();
-
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            objVector.Agregar(txtCodigo.Text, txtDeuda.Text, txtUsuario.Text, txtLimite.Text);
+            clsVector.Agregar(txtCodigo.Text, txtDeuda.Text, txtUsuario.Text, txtLimite.Text);
+
+            txtCodigo.Clear();
+            txtDeuda.Clear();
+            txtLimite.Clear();
+            txtUsuario.Clear();
         }
     }
 }

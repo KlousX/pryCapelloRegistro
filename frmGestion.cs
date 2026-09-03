@@ -42,5 +42,11 @@ namespace pryCapelloRegistro
             Form ListadoDeudores = new frmListadoDeudores();
             ListadoDeudores.ShowDialog();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Cerrar = new frmGestion();
+            Cerrar.Close();
+        }
     }
 }

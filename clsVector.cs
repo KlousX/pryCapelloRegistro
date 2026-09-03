@@ -53,13 +53,13 @@ namespace pryCapelloRegistro
             indice++;
         }
 
-        public void Agregar(string cod, string deu, string usu, string lim)
+        public static void Agregar(string cod, string deu, string usu, string lim)
         {
             if (indice < clientes.Length)
             {
                 //Busqueda Secuencial
                 Int32 i = 0;
-                while (clientes[i].codigo != Convert.ToInt32(cod) && i < clsVector.indice)
+                while (i < clsVector.indice && clientes[i].codigo != Convert.ToInt32(cod))
                 {
                     i++;
                 }
@@ -69,7 +69,7 @@ namespace pryCapelloRegistro
                     clientes[indice].usuario = usu;
                     clientes[indice].limite = Convert.ToDecimal(lim);
                     clientes[indice].deuda = Convert.ToInt32(deu);
-
+                    indice++;
                 }
                 else
                 {
